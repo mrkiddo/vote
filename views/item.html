@@ -1,0 +1,49 @@
+<div class="row">
+
+  <div class="col-md-8 col-md-offset-2" ng-hide="showResult">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">VOTE</h3>
+      </div>
+      <div class="panel-body">
+        <h4>{{vote.title}}</h4>
+        <div ng-repeat="(key, value) in vote.options">
+          <input type="radio" value="{{key}}" name="item" ng-click="select(key)"><label> {{value.content}}</label>
+        </div>
+        <button class="btn btn-success" ng-click="submit()" ng-hide="disableSubmit">Vote!</button>
+      </div>
+      <div class="panel-footer">
+        <span>Created by: {{vote.creater}} </span> at <span>{{vote.date}} </span>
+        <span>{{vote | total}} voters attended</span>
+        <a ng-href="index.html#/list" class="btn btn-info">Back to List</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-md-8 col-md-offset-2" ng-show="showResult">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">VOTE ANALYSIS</h3>
+      </div>
+      <div class="panel-body">
+        <h4>{{vote.title}}</h4>
+        <div ng-repeat="(key, value) in vote.options">
+          {{value.content}}
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{value.rate/totalRate*100}}" aria-valuemin="0" aria-valuemax="100" style="width: {{value.rate/totalRate*100}}%;">{{value.rate/totalRate*100 | number:1}}%</div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <span>Created by: {{vote.creater}} </span> at <span>{{vote.date}} </span>
+        <span>{{vote | total}} voters attended</span>
+        <a ng-href="index.html#/list" class="btn btn-info">Back to List</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>

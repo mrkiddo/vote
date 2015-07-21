@@ -1,0 +1,19 @@
+<div class="row">
+
+  <div class="col-md-8 col-md-offset-2">
+
+    <div class="panel panel-default" ng-repeat="record in records">
+      <div class="panel-heading">
+        <h3 class="panel-title">VOTE HISTORY</h3>
+      </div>
+      <div class="panel-body">
+        <p><a ng-href="index.html#/item/{{record.id}}">{{record.title}}</a></p>
+        <p>Your choice: {{record.option}}</p>
+      </div>
+    </div>
+
+    <a ng-href="index.html#/list" class="btn btn-info">Back to List</a>
+
+  </div>
+
+</div>

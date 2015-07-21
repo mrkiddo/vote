@@ -1,0 +1,23 @@
+<div class="row">
+
+  <div class="col-md-8 col-md-offset-2">
+
+    <div class="alert alert-danger" role="alert" ng-bind="error" ng-show="error"></div>
+
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">E-MAIL</span>
+      <input type="text" class="form-control" placeholder="E-MAIL" ng-model="email">
+    </div>
+    <br>
+    <div class="input-group">
+      <span class="input-group-addon" id="basic-addon1">PASSWORD</span>
+      <input type="password" class="form-control" ng-model="passwd">
+    </div>
+    <br>
+    <div class="input-group">
+      <button class="btn btn-info" ng-click="login()" ng-show="email&&passwd">LOGIN</button>
+    </div>
+
+  </div>
+
+</div>
