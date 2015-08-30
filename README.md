@@ -1,9 +1,10 @@
-# vote
-"just-vote" project based on angularjs and firebase
+# Just-Vote
+
+"just-vote" project based on angularJS and firebase
 
 Employing firebase library angularfire
 
-Still ongoing for finishing and improvement
+Still ongoing for improvement and adding new features
 
 Basic functions:
   user auth
@@ -11,9 +12,6 @@ Basic functions:
   vote item
   create vote
   voting history
-
-Create new user function not finished,
-Temporarily use "pp@gmail.com" and "000000" to login
 
 Firebase deployed.
 
